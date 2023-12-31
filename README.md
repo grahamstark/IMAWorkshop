@@ -16,9 +16,37 @@ The two files we'll be using are in the [src/ directory](https://github.com/grah
 
 ![Code Icon Location](https://github.com/grahamstark/IMAWorkshop/blob/main/images/ima-rep-1.png)
 
-You can download everything .. 
-
 ### Installing Packages
 
+Much of the functionality we need comes i
 
+```julia 
+# ==== cut and paste === 
+
+# add some packages we'll need.
+Pkg.add( "CSV" )        # delimted file reader
+Pkg.add( "DataFrames" ) # tables of data
+Pkg.add( "Downloads" )  # allow file reading from websites
+Pkg.add( "GLM" )        # linear regressions
+Pkg.add( "Plots" )      # simple but powerful graphics package - Makie.jl is an alternative
+Pkg.add( "Pluto" )      # Beautiful interactive workbooks
+Pkg.add( "PlutoUI" )    # controls for Pluto
+Pkg.add( "PovertyAndInequalityMeasures" ) # One of mine! Ginis and the like 
+Pkg.add( "StatsBase" )  # means, medians ..
+Pkg.add( "StatsPlots")  # specialised plots for data from dataframes
+
+# now we have them installed, bring the packages into our code 
+using CSV
+using DataFrames
+using Downloads
+using GLM
+using Plots
+using Pluto
+using PlutoUI
+using PovertyAndInequalityMeasures
+using StatsBase
+using StatsPlots
+
+# === end copy == 
+```
  
