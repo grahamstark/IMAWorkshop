@@ -4,6 +4,8 @@ Code for the 2024 IMA Conference Julia Workshop
 
 ## Instructions
 
+I've made a [wee video that walks you through the install steps](https://virtual-worlds.scot/imaworkshop/ima-julia-intro.mp4) 
+
 It would be nice if you could have a go at installing Julia ahead of the workshop as it'll save us a wee while. Installing the packages would also be good as an admitted problem with Julia is that [first time loading packages is sometimes slow](https://discourse.julialang.org/t/taking-ttfx-seriously-can-we-make-common-packages-faster-to-load-and-use/74949?page=2).
 
 ### Installing Julia
@@ -12,7 +14,7 @@ We'll be using the latest Julia 1.10, downloadable from [here](https://julialang
 
 ### Files in this repository
 
-The two files we'll be using are in the [src/ directory](https://github.com/grahamstark/IMAWorkshop/tree/main/src). You can right click over them to download them. Alternatively, you can download everything here as a zip file by clicking on the green `Code` icon on the home page and selecting `Download ZIP`, or by using a Git client to clone the repository if that's your thing.
+The two files we'll be using are in the [src/ directory](https://github.com/grahamstark/IMAWorkshop/tree/main/src). To download them, go to the file and select the "Download Raw File" option from the icons on the top right. Alternatively, you can download everything here as a zip file by clicking on the green `Code` icon on the home page and selecting `Download ZIP`, or by using a Git client to clone the repository if that's your thing.
 
 ### Installing Packages
 
