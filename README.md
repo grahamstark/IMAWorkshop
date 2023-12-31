@@ -12,6 +12,8 @@ We'll be using the latest Julia 1.10, downloadable from [here](https://julialang
 
 ### Files in this repository
 
+The two files we'll be using are in the [src/ directory](https://github.com/grahamstark/IMAWorkshop/tree/main/src). You can right click over them do download them. Alternatively, you can download everything here as a zip file by clicking on '' above and selecting '', or by using a Git client to clone the repository if that's your thing.
+
 You can download everything .. 
 
 ### Installing Packages
