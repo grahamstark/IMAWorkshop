@@ -20,6 +20,7 @@ Much of the functionality of Julia comes in packages which have to be installed 
 
 ```julia 
 # ==== cut and paste === 
+using Pkg # Pkg is the package that manages packages.
 
 # add some packages we'll need.
 Pkg.add( "CSV" )        # delimited file reader
