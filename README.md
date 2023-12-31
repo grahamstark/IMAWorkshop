@@ -14,11 +14,9 @@ We'll be using the latest Julia 1.10, downloadable from [here](https://julialang
 
 The two files we'll be using are in the [src/ directory](https://github.com/grahamstark/IMAWorkshop/tree/main/src). You can right click over them to download them. Alternatively, you can download everything here as a zip file by clicking on the green `Code` icon on the home page and selecting `Download ZIP`, or by using a Git client to clone the repository if that's your thing.
 
-![Code Icon Location](https://github.com/grahamstark/IMAWorkshop/blob/main/images/ima-rep-1.png)
-
 ### Installing Packages
 
-Much of the functionality we need comes i
+Much of the functionality of Julia comes in packages which have to be installed seperately. The file [repl-code.jl](https://github.com/grahamstark/IMAWorkshop/blob/main/src/repl-code.jl) contains code to install all the packages we'll be needing - stuff to load data, run regressions, plot results and calculate inequality measures, and more. Alteratively, just cut and paste the code below into Julia's repl. It may take a while for Julia to build everything, so this is a good thing to do before the day.
 
 ```julia 
 # ==== cut and paste === 
