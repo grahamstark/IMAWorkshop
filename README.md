@@ -22,7 +22,7 @@ Much of the functionality of Julia comes in packages which have to be installed 
 # ==== cut and paste === 
 
 # add some packages we'll need.
-Pkg.add( "CSV" )        # delimted file reader
+Pkg.add( "CSV" )        # delimited file reader
 Pkg.add( "DataFrames" ) # tables of data
 Pkg.add( "Downloads" )  # allow file reading from websites
 Pkg.add( "GLM" )        # linear regressions
