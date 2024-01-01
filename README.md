@@ -1,24 +1,22 @@
-# IMAWorkshop
+# IMA 2024 Julia Workshop
 
-Code for the 2024 IMA Conference Julia Workshop
-
-## Instructions
-
-I've made a [wee video that walks you through the install steps](https://virtual-worlds.scot/imaworkshop/ima-julia-intro.mp4) 
+This is code for the 2024 IMA Conference Julia Workshop.
 
 It would be nice if you could have a go at installing Julia ahead of the workshop as it'll save us a wee while. Installing the packages would also be good as an admitted problem with Julia is that [first time loading packages is sometimes slow](https://discourse.julialang.org/t/taking-ttfx-seriously-can-we-make-common-packages-faster-to-load-and-use/74949?page=2).
 
-### Installing Julia
+I've made a [wee video that walks you through the install steps](https://virtual-worlds.scot/imaworkshop/ima-julia-intro.mp4).
+
+## Installing Julia
 
 We'll be using the latest Julia 1.10, downloadable from [here](https://julialang.org/downloads/).
 
-### Files in this repository
+## Files in this repository
 
-The two files we'll be using are in the [src/ directory](https://github.com/grahamstark/IMAWorkshop/tree/main/src). To download them, go to the file and select the "Download Raw File" option from the icons on the top right. Alternatively, you can download everything here as a zip file by clicking on the green `Code` icon on the home page and selecting `Download ZIP`, or by using a Git client to clone the repository if that's your thing.
+The files we'll be referring to are in the [src/ directory](https://github.com/grahamstark/IMAWorkshop/tree/main/src). To download them, go to the file and select the "Download Raw File" option from the icons on the top right. Alternatively, you can download everything here as a zip file by clicking on the green `Code` icon on the repository home page and selecting `Download ZIP`, or by using a Git client to clone the repository, if that's your thing.
 
 ### Installing Packages
 
-Much of the functionality of Julia comes in packages which have to be installed seperately. The file [repl-code.jl](https://github.com/grahamstark/IMAWorkshop/blob/main/src/repl-code.jl) contains code to install all the packages we'll be needing - stuff to load data, run regressions, plot results and calculate inequality measures, and more. Alteratively, just cut and paste the code below into Julia's repl. It may take a while for Julia to build everything, so this is a good thing to do before the day.
+Much of the functionality of Julia comes in packages which have to be installed separately. The file [repl-code.jl](https://github.com/grahamstark/IMAWorkshop/blob/main/src/repl-code.jl) contains code to install all the packages we'll be needing - there are packages for loading data, running regressions, plotting results and calculating inequality measures, and so on. Alteratively, just cut and paste the code below into Julia's repl. It may take a while for Julia to build everything, so this is a good thing to do before the day.
 
 ```julia 
 # ==== cut and paste === 
