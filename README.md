@@ -55,8 +55,3 @@ using StatsPlots
 * [Example 2 TriplePC](https://triplepc.northumbria.ac.uk/)
 * [MIT Introduction to Computational Thinking](https://computationalthinking.mit.edu/Fall23/)
 
-
-LCF: 
-
-url="https://virtual-worlds.scot/ou/uk-lcf-subset-2005-6.csv"
- 
