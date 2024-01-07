@@ -110,6 +110,8 @@ begin
 		benefit :: Number
 	end
 
+	Result() = Result( 0.0,0.0,0.0,0.0,0.0 )
+
 	# holder for 1 tax system
 	struct System
 		allowance    :: Number
@@ -122,7 +124,7 @@ begin
 
 	# calculate for one household and one system, returning one result
 	function calc_system( hh::DataFrameRow, sys :: System ) :: Result
-		out = Result(0.0,0.0,0.0,0.0,0.0)
+		out = Result()
 		taxable = max(0.0, hh.hhincome-sys.allowance )
 		out.tax = taxable*sys.it_rate
 		out.ni = max(0.0, hh.gross_pay*sys.ni_rate)
