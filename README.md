@@ -51,10 +51,9 @@ using StatsPlots
 
 ## Links: 
 
-[Example 1 Budget Constraints](https://stb.virtual-worlds.scot/bcd/)
-[Example 2 TriplePC](https://triplepc.northumbria.ac.uk/)
-
-[MIT Introduction to Computational Thinking](https://computationalthinking.mit.edu/Fall23/)
+* [Example 1 Budget Constraints](https://stb.virtual-worlds.scot/bcd/)
+* [Example 2 TriplePC](https://triplepc.northumbria.ac.uk/)
+* [MIT Introduction to Computational Thinking](https://computationalthinking.mit.edu/Fall23/)
 
 
 LCF: 
