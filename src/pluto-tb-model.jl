@@ -66,17 +66,21 @@ end
 md"""
 ## Load Our Old Living Costs and Food (LCF) Data (Again)
 
-Each row represents a single household in the [UKDS 2005/6 LCF teaching dataset](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6117). I've simplified the data a bit and made the names a bit clearer.
+Each row represents a single household in the [UKDS 2005/6 LCF teaching dataset](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6117), anonymised by running through the R synthpop package. I've simplified the data a bit and made the names a bit clearer.
 
 """
 
 # ╔═╡ 23a07389-9350-41c8-bbf7-4a1b9402735b
 begin
-url="https://virtual-worlds.scot/ou/uk-lcf-subset-2005-6.csv"
+url = "https://virtual-worlds.scot/ou/uk-lcf-subset-2005-6.csv"
 
-# load LCF into a DataFrame (a spreadsheet-like structure, like Python Pandas, R Tibble)
-lcf = CSV.File(Downloads.download(url))|>DataFrame
+# load LCF into a DataFrame (a spreadsheet-like structure, like Python Pandas, R Tibble) synthpop
+lcf = CSV.File( Downloads.download( url, headers=Dict(["Cache-Control"=>"no-cache"]) ) )|>DataFrame
+	
 end
+
+# ╔═╡ a51875d3-c127-49c0-b19f-3fe863745195
+Downloads.download("https://virtual-worlds.scot/ou/uk-lcf-subset-2005-6.csv")|>CSV.File
 
 # ╔═╡ f7ef5d9b-b32b-49f1-a8be-fa270a807b87
 
@@ -406,7 +410,7 @@ PovertyAndInequalityMeasures = "582645c0-90fa-497a-98b9-936b80116c29"
 StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"
 
 [compat]
-CSV = "~0.10.11"
+CSV = "~0.10.12"
 DataFrames = "~1.6.1"
 Formatting = "~0.4.2"
 Plots = "~1.39.0"
@@ -421,7 +425,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "6c940a312002c2b2d1f266852268a5f0c633c923"
+project_hash = "e3b0a6de3cb33d276a08f477f68dcea4bbfdfd3c"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -436,9 +440,9 @@ weakdeps = ["ChainRulesCore", "Test"]
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
-git-tree-sha1 = "793501dcd3fa7ce8d375a2c878dca2296232686e"
+git-tree-sha1 = "c278dfab760520b8bb7e9511b968bf4ba38b7acc"
 uuid = "6e696c72-6542-2067-7265-42206c756150"
-version = "1.2.2"
+version = "1.2.3"
 
 [[deps.Adapt]]
 deps = ["LinearAlgebra", "Requires"]
@@ -491,9 +495,9 @@ version = "1.0.8+0"
 
 [[deps.CSV]]
 deps = ["CodecZlib", "Dates", "FilePathsBase", "InlineStrings", "Mmap", "Parsers", "PooledArrays", "PrecompileTools", "SentinelArrays", "Tables", "Unicode", "WeakRefStrings", "WorkerUtilities"]
-git-tree-sha1 = "44dbf560808d49041989b8a96cae4cffbeb7966a"
+git-tree-sha1 = "679e69c611fff422038e9e21e270c4197d49d918"
 uuid = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
-version = "0.10.11"
+version = "0.10.12"
 
 [[deps.Cairo_jll]]
 deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
@@ -601,9 +605,9 @@ version = "1.6.1"
 
 [[deps.DataStructures]]
 deps = ["Compat", "InteractiveUtils", "OrderedCollections"]
-git-tree-sha1 = "3dbd312d370723b6bb43ba9d02fc36abade4518d"
+git-tree-sha1 = "ac67408d9ddf207de5cfa9a97e114352430f01ed"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
-version = "0.18.15"
+version = "0.18.16"
 
 [[deps.DataValueInterfaces]]
 git-tree-sha1 = "bfc1187b79289637fa0ef6d4436ebdfe6905cbd6"
@@ -643,9 +647,9 @@ uuid = "8ba89e20-285c-5b6f-9357-94700520ee1b"
 
 [[deps.Distributions]]
 deps = ["FillArrays", "LinearAlgebra", "PDMats", "Printf", "QuadGK", "Random", "SpecialFunctions", "Statistics", "StatsAPI", "StatsBase", "StatsFuns"]
-git-tree-sha1 = "9242eec9b7e2e14f9952e8ea1c7e31a50501d587"
+git-tree-sha1 = "7c302d7a5fec5214eb8a5a4c466dcf7a51fcf169"
 uuid = "31c24e10-a181-5473-b8eb-7969acd0382f"
-version = "0.25.104"
+version = "0.25.107"
 
     [deps.Distributions.extensions]
     DistributionsChainRulesCoreExt = "ChainRulesCore"
@@ -682,9 +686,9 @@ version = "0.0.20230411+0"
 
 [[deps.ExceptionUnwrapping]]
 deps = ["Test"]
-git-tree-sha1 = "e90caa41f5a86296e014e148ee061bd6c3edec96"
+git-tree-sha1 = "dcb08a0d93ec0b1cdc4af184b26b591e9695423a"
 uuid = "460bff9d-24e4-43bc-9d9f-a8973cb893f4"
-version = "0.1.9"
+version = "0.1.10"
 
 [[deps.Expat_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl"]
@@ -1439,9 +1443,9 @@ weakdeps = ["ChainRulesCore"]
 
 [[deps.StaticArrays]]
 deps = ["LinearAlgebra", "PrecompileTools", "Random", "StaticArraysCore"]
-git-tree-sha1 = "fba11dbe2562eecdfcac49a05246af09ee64d055"
+git-tree-sha1 = "4e17a790909b17f7bf1496e3aec138cf01b60b3b"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
-version = "1.8.1"
+version = "1.9.0"
 weakdeps = ["ChainRulesCore", "Statistics"]
 
     [deps.StaticArrays.extensions]
@@ -1620,9 +1624,9 @@ version = "1.21.0+1"
 
 [[deps.Wayland_protocols_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "4528479aa01ee1b3b4cd0e6faef0e04cf16466da"
+git-tree-sha1 = "93f43ab61b16ddfb2fd3bb13b3ce241cafb0e6c9"
 uuid = "2381bf8a-dfd0-557d-9999-79630e7b1b91"
-version = "1.25.0+0"
+version = "1.31.0+0"
 
 [[deps.WeakRefStrings]]
 deps = ["DataAPI", "InlineStrings", "Parsers"]
@@ -1928,6 +1932,7 @@ version = "1.4.1+1"
 # ╟─9687a185-8329-4cd6-9414-8ea33f7c2bb4
 # ╠═fb426dd8-7821-4004-b0dc-4c85afd77f06
 # ╠═23a07389-9350-41c8-bbf7-4a1b9402735b
+# ╠═a51875d3-c127-49c0-b19f-3fe863745195
 # ╟─f7ef5d9b-b32b-49f1-a8be-fa270a807b87
 # ╟─5b055795-3b62-478d-b1f5-8fc9ae0c0706
 # ╠═223e08c0-0167-4883-9548-ef6023b74b4b

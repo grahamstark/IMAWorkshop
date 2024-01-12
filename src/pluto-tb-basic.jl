@@ -9,11 +9,11 @@ using Downloads,DataFrames, CSV, Plots, Formatting
 
 # ╔═╡ 9dbbefd8-faf1-4b30-b86d-5e296d0c25a5
 begin
-# this a publicly available subset of a rather old UK Living Costs and Food Survey (2005-6)
+# this a publicly available subset of a rather old UK Living Costs and Food Survey (2005-6), pushed through synthpop
 url="https://virtual-worlds.scot/ou/uk-lcf-subset-2005-6.csv"
 
 # load LCF into a DataFrame (a spreadsheet-like structure, like Python Pandas, R Tibble)
-lcf = CSV.File(Downloads.download(url))|>DataFrame
+lcf = CSV.File(Downloads.download(url)) |> DataFrame
 end
 
 # ╔═╡ 5001d6a3-438b-4d6c-8477-4d072ce885ad
@@ -32,7 +32,8 @@ begin
 	n = size(lcf)[1]
 	allow = 10_000/52
 	rate = 50/100.0
-	ben = 0
+	ben = 400
+	
 	weight = 26_000_000/n
 end
 
